@@ -20,7 +20,7 @@ const departUpdate = async(req, res) => {
     
     try {
         
-        const departdate = await Department.updateOne({name}, {status});
+        const departdate = await Department.updateOne({name}, {status, updatedAt : Date.now});
         //const departdate = await Department.find({name});
         res.json({msg: 'Department is updated.', response: departdate});
 
@@ -68,7 +68,7 @@ const departdelete = async(req, res) => {
 
     try {
         
-        const departdeleted = await Department.updateOne({name}, {status: "Deleted"});
+        const departdeleted = await Department.updateOne({name}, {status: "Deleted", updatedAt : Date.now});
         res.json({msg: "department has been deleted.", response: departdeleted});
 
     } catch (error) {

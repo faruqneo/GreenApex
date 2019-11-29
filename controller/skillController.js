@@ -20,7 +20,7 @@ const skillUpdate = async(req, res) => {
     
     try {
         
-        const skilldate = await Skill.updateOne({name}, {$set: {status, department}});
+        const skilldate = await Skill.updateOne({name}, {status, department, updatedAt : Date.now});
         //const departdate = await Department.find({name});
         res.json({msg: 'Skill is updated.', response: skilldate});
 
@@ -69,7 +69,7 @@ const skilldelete = async(req, res) => {
 
     try {
         
-        const skilldeleted = await Skill.updateOne({name}, {status: "Deleted"});
+        const skilldeleted = await Skill.updateOne({name}, {status: "Deleted", updatedAt : Date.now});
         res.json({msg: "department has been deleted.", response: skilldeleted});
 
     } catch (error) {

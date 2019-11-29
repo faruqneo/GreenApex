@@ -23,7 +23,7 @@ Request
 ```
 
 3. Get all the departments\
-GET `/department`\
+GET `/department`
 
 4. Delete a department\
 Delete `/department`

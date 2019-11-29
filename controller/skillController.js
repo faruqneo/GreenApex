@@ -70,7 +70,7 @@ const skilldelete = async(req, res) => {
     try {
         
         const skilldeleted = await Skill.updateOne({name}, {status: "Deleted", updatedAt : Date.now});
-        res.json({msg: "department has been deleted.", response: skilldeleted});
+        res.json({msg: "skill has been deleted.", response: skilldeleted});
 
     } catch (error) {
         

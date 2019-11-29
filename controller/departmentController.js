@@ -51,7 +51,7 @@ const departGetActive = async(req, res) => {
             res.send(departdate);
 
             else
-            res.send("No skills are active");
+            res.send("No department are active");
     
         }
         

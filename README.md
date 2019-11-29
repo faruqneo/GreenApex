@@ -1,6 +1,6 @@
 # GreenApex
 
-#1 - Department
+# #1 - Department
 
 1.Create a department
 POST `/department`
@@ -37,7 +37,9 @@ Request
 5.Get a particular department
 GET `/department?departName=front-end`
 
-#2 - Skill
+
+
+# #2 - Skill
 
 1.Create a skill.
 POST `/skill`

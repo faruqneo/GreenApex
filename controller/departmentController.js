@@ -38,12 +38,14 @@ const departGetActive = async(req, res) => {
         if(req.query.departName)
         {
             const departdate = await Department.find({name: req.query.departName});
+            console.table(departdate)
             res.send(departdate);
         }
         else
         {
             const departdate = await Department.find({status: 'Active'});
             //res.send(departdate);
+            console.table(departdate)
 
             if(departdate.length)
             res.send(departdate);

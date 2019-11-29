@@ -37,11 +37,14 @@ const skillGetActive = async(req, res) => {
         if(req.query.skillName)
         {
             const skilldata = await Skill.find({name: req.query.skillName});
+            console.table(skilldata)
             res.send(skilldata);
         }
         else
         {
             const skilldata = await Skill.find({status: 'Active'});
+
+            console.table(skilldata)
 
             if(skilldata.length)
                 res.send(skilldata);
@@ -82,7 +85,7 @@ const skillGetAll = async(req, res) => {
 
     try {
         const skilldata = await Skill.find({status: 'Active'}).populate('department');
-
+        console.table(skilldata);
         res.send(skilldata);
     } catch (error) {
         

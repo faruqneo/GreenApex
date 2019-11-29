@@ -4,7 +4,6 @@
 
 1. Create a department\
 POST `/department`\
-Request
 ```
 {
 	"name": "back-end",
@@ -14,7 +13,6 @@ Request
 
 2. Update a department\
 PUT `/department`\
-Request
 ```
 {
 	"name": "back-end",
@@ -27,7 +25,6 @@ GET `/department`
 
 4. Delete a department\
 Delete `/department`
-Request
 ```
 {
 	"name": "back-end"
@@ -43,7 +40,6 @@ GET `/department?departName=front-end`
 
 1. Create a skill.\
 POST `/skill`\
-Request
 ```
 {
 	"name": "Angular",
@@ -54,7 +50,6 @@ Request
 
 2. Update a skill\
 PUT `/skill`\
-Request
 ```
 {
 	"name": "Angular",
@@ -68,7 +63,6 @@ GET `/skill`
 
 4. Delete a skill\
 Delete `/skill`\
-Request
 ```
 {
 	"name": "Angular"

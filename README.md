@@ -26,7 +26,7 @@ Request
 GET `/department`\
 
 4. Delete a department\
-Delete `/department`\
+Delete `/department`
 Request
 ```
 {
@@ -35,7 +35,7 @@ Request
 ```
 
 5. Get a particular department\
-GET `/department?departName=front-end`\
+GET `/department?departName=front-end`
 
 
 
@@ -64,7 +64,7 @@ Request
 ```
 
 3. Get all the skills\
-GET `/skill`\
+GET `/skill`
 
 4. Delete a skill\
 Delete `/skill`\
@@ -75,10 +75,10 @@ Request
 }
 ```
 5. Get a particular skill\
-GET `/skill?skillName=Angular`\
+GET `/skill?skillName=Angular`
 
 6. Get all the skills of the department\
-GET `/skill/All`\
+GET `/skill/All`
 
 
 `Note: instend of timestamp we have createdAt & updatedAt fields`

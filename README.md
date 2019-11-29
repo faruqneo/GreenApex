@@ -3,7 +3,7 @@
 ## Department
 
 1. Create a department\
-POST `/department`\
+POST `/department`
 ```
 {
 	"name": "back-end",
@@ -12,7 +12,7 @@ POST `/department`\
 ```
 
 2. Update a department\
-PUT `/department`\
+PUT `/department`
 ```
 {
 	"name": "back-end",
@@ -39,7 +39,7 @@ GET `/department?departName=front-end`
 ## Skill
 
 1. Create a skill.\
-POST `/skill`\
+POST `/skill`
 ```
 {
 	"name": "Angular",
@@ -49,7 +49,7 @@ POST `/skill`\
 ```
 
 2. Update a skill\
-PUT `/skill`\
+PUT `/skill`
 ```
 {
 	"name": "Angular",
@@ -62,7 +62,7 @@ PUT `/skill`\
 GET `/skill`
 
 4. Delete a skill\
-Delete `/skill`\
+Delete `/skill`
 ```
 {
 	"name": "Angular"

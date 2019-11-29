@@ -29,7 +29,7 @@ app.all('*', (req, res) => res.send('Access denied'))
 //System Running.
 mongoose
 .connect('mongodb://localhost/greenTest', {useNewUrlParser: true, useUnifiedTopology: true})
-.then(() => app.listen(PORT), () => console.log(`Server is running on ${PORT} \nConnted with mongoddb.`))
+.then(() => app.listen(PORT, () => console.log(`Server is running on ${PORT} \nConnted with mongoddb.`)))
 .catch(() => console.log('Unable to connect with db.'))
 
 

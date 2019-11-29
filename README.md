@@ -2,9 +2,8 @@
 
 #1 - Department
 
-Create a department
+1.Create a department
 POST `/department`
-
 Request
 ```
 {
@@ -13,9 +12,8 @@ Request
 }
 ```
 
-Update a department
+2.Update a department
 PUT `/department`
-
 Request
 ```
 {
@@ -24,12 +22,11 @@ Request
 }
 ```
 
-Get all the departments
+3.Get all the departments
 GET `/department`
 
-Delete a department
+4.Delete a department
 Delete `/department`
-
 Request
 ```
 {
@@ -37,14 +34,13 @@ Request
 }
 ```
 
-Get a particular department
+5.Get a particular department
 GET `/department?departName=front-end`
 
 #2 - Skill
 
-Create a skill.
+1.Create a skill.
 POST `/skill`
-
 Request
 ```
 {
@@ -54,9 +50,8 @@ Request
 }
 ```
 
-Update a skill
+2.Update a skill
 PUT `/skill`
-
 Request
 ```
 {
@@ -66,22 +61,21 @@ Request
 }
 ```
 
-Get all the skills
+3.Get all the skills
 GET `/skill`
 
-Delete a skill
+4.Delete a skill
 Delete `/skill`
-
 Request
 ```
 {
 	"name": "Angular"
 }
 ```
-Get a particular skill
+5.Get a particular skill
 GET `/skill?skillName=Angular`
 
-Get all the skills of the department
+6.Get all the skills of the department
 GET `/skill/All`
 
 

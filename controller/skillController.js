@@ -1,5 +1,8 @@
 const Skill = require('../model/skill');
 
+/*
+     @des Creating a skill.
+*/
 const skillCreate = async(req, res) => {
     const skill = req.body;
 
@@ -15,12 +18,14 @@ const skillCreate = async(req, res) => {
     }
 }
 
+/*
+     @des Updating a skill.
+*/
 const skillUpdate = async(req, res) => {
     const {name, status, department} = req.body;
     
     try {
-        
-        const skilldate = await Skill.updateOne({name}, {status, department, updatedAt : Date.now});
+        const skilldate = await Skill.updateOne({name}, req.body);
         //const departdate = await Department.find({name});
         res.json({msg: 'Skill is updated.', response: skilldate});
 
@@ -31,29 +36,32 @@ const skillUpdate = async(req, res) => {
     }
 }
 
+/*
+     @des Fatching of skills.
+*/
 const skillGetActive = async(req, res) => {
+
+    let skilldata = null;
     try {
 
         if(req.query.skillName)
-        {
-            const skilldata = await Skill.find({name: req.query.skillName});
-            console.table(skilldata)
-            res.send(skilldata);
-        }
+            skilldata = await Skill.find({name: req.query.skillName});
+            // console.table(skilldata)
+            // res.send(skilldata);
+        
         else
-        {
-            const skilldata = await Skill.find({status: 'Active'});
+            skilldata = await Skill.find({status: "Active"});
 
-            console.table(skilldata)
 
-            if(skilldata.length)
-                res.send(skilldata);
-
-            else
-            res.send("No skills are active");
             //res.send(skilldata);
     
-        }
+        console.table(skilldata)
+
+        if(skilldata.length)
+            res.send(skilldata);
+
+        else
+        res.send("No skills are active");
         
 
     } catch (error) {
@@ -63,13 +71,16 @@ const skillGetActive = async(req, res) => {
     }
 }
 
+/*
+     @des Deleting a skill.
+*/
 const skilldelete = async(req, res) => {
 
     const {name} = req.body;
 
     try {
         
-        const skilldeleted = await Skill.updateOne({name}, {status: "Deleted", updatedAt : Date.now});
+        const skilldeleted = await Skill.updateOne({name}, {status: "Deleted", updatedAt : Date.now()});
         res.json({msg: "skill has been deleted.", response: skilldeleted});
 
     } catch (error) {
@@ -81,6 +92,9 @@ const skilldelete = async(req, res) => {
 
 }
 
+/*
+     @des Fatching data of all skills.
+*/
 const skillGetAll = async(req, res) => {
 
     try {
